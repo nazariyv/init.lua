@@ -1,3 +1,9 @@
+-- [[ Setting options ]]
+-- See `:help vim.o`
+
+-- Enable mouse mode
+vim.opt.mouse = "a"
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -29,4 +35,3 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-

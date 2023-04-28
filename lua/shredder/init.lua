@@ -1,12 +1,12 @@
-require("theprimeagen.set")
-require("theprimeagen.remap")
+require("shredder.set")
+require("shredder.remap")
 
 -- DO NOT INCLUDE THIS
-vim.opt.rtp:append("~/personal/streamer-tools")
+-- vim.opt.rtp:append("~/personal/streamer-tools")
 -- DO NOT INCLUDE THIS
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+-- local ThePrimeagenGroup = augroup('ThePrimeagen', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -26,12 +26,15 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
-})
+-- autocmd({"BufWritePre"}, {
+--    group = ThePrimeagenGroup,
+--    pattern = "*",
+--     command = [[%s/\s\+$//e]],
+-- })
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
