@@ -6,5 +6,6 @@ require('lualine').setup {
     component_separators = '|',
     section_separators = '',
     path = 1,
+    file_status = true,
   },
 }
